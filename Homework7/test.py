@@ -6,7 +6,7 @@ def test(date):
 
 
 	for line in iter(f.readline,""):
-		pos = f.tell()
+		# pos = f.tell()
 		data = line.rstrip().split(",")
 		# called_or_not gets last item in that array (date of call, or nothing)
 		called_or_not = data[-1]
@@ -14,8 +14,8 @@ def test(date):
 			pos = f.tell()
 			called_or_not = date
 			new_line = data.append(called_or_not)
-			f.seek(pos)
-			f.write("".join(data))
+			# f.seek(pos)
+			f.write(",".join(data))
 
 		# f.write("".join(data)) # this wrote "Called" over the start of every line
 
