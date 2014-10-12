@@ -31,7 +31,7 @@ def load_customers(filename):
 		for i in range(len(header)):
 			customer[header[i]] = data[i]
 
-		# Add the customer to our dictionary by customer id
+		# Add the customer dictionary to our overall dictionary by customer id
 		customers[customer['customer_id']] = customer
 
 	# Close the file
